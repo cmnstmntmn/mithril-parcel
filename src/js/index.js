@@ -1,14 +1,16 @@
 import m from "mithril";
-import marker from '../img/marker.svg';
+import icons from "./../img/*.svg";
+
 
 const app = {
     view: () => {
         return [
             m('h1', 'Mithril JS'),
+            m('pre', JSON.stringify(icons, null, 2)),
             m('img.db', {
                 width: 24,
                 alt: 'marker',
-                src: marker
+                src: icons.marker
               })
         ]
     }
